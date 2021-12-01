@@ -570,13 +570,13 @@ body {
   font-family: "Lobster", cursive;
   font-size: 3.5rem;
   color: #f3ede8;
-  animation: paquetes 4.5s infinite 3s; }
+  animation: paquetes 3s infinite 3s; }
 
 @keyframes paquetes {
   25% {
-    text-shadow: 1px 1px #F02400, 1.5px 1.5px #F02400, 2px 2px #F7760C; }
+    text-shadow: 1px 1px #cc2c10, 1.5px 1.5px #cc2c10, 2px 2px #F7760C; }
   50% {
-    text-shadow: 1px 1px #F02400, 1.5px 1.5px #F02400, 2px 2px #F7760C, 2.5px 2.5px #F7760C, 3px 3px #F70C7E, 3.5px 3.5px #F70C7E; } }
+    text-shadow: 1px 1px #cc2c10, 1.5px 1.5px #cc2c10, 2px 2px #F7760C, 2.5px 2.5px #F7760C, 3px 3px #aa336d, 3.5px 3.5px #aa336d; } }
 
 .precios-tabla {
   width: 250px;
@@ -593,14 +593,14 @@ body {
     cursor: pointer; }
   .precios-tabla__cabeza {
     min-height: 150px;
-    background: #F70C7E;
+    background: #aa336d;
     color: #fff;
     padding: 0 0 30px; }
     .precios-tabla__cabeza--uno {
       background: #F7760C;
       color: #FFF; }
     .precios-tabla__cabeza--tres {
-      background: #F02400;
+      background: #cc2c10;
       color: #fff; }
   .precios-tabla__paquete {
     text-align: center;

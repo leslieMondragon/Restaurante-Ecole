@@ -2,9 +2,9 @@ $negro: rgb(104, 102, 100);
 $blanco:  #f3ede8;
 $amarillo: #F7760C;
 $naranja: #D9490B;
-$rojo1: #F02400;
-$rojo2: #D90B0B;
-$rosa: #F70C7E;
+$rojo1: #cc2c10;
+$rojo2: #b11616;
+$rosa: #aa336d;
 
 // CAROUSEL 
 .carousel-item img{
@@ -34,7 +34,7 @@ $rosa: #F70C7E;
   font-family: "Lobster", cursive;
   font-size: 3.5rem;
   color:$blanco;
-  animation: paquetes 4.5s infinite 3s;
+  animation: paquetes 3s infinite 3s;
 }
 
 @keyframes paquetes {
