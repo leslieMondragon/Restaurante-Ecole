@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css?family=Lora:400,400i,700");
 @import url(https://fonts.googleapis.com/css?family=Noto+Sans:700);
 @import url(https://fonts.googleapis.com/css?family=Sanchez);
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Roboto&display=swap");
 @import url(https://fonts.googleapis.com/css?family=Dancing+Script:700);
 @import url(https://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,400italic);
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
@@ -581,6 +582,22 @@ h1.hdr-h1 {
   height: 100%;
   margin: 2rem auto; }
 
+.heading {
+  text-align: center; }
+
+.heading h1 {
+  margin-top: 35px;
+  font-family: "Lobster", cursive;
+  font-size: 3.5rem;
+  color: #f3ede8;
+  animation: paquetes 6s infinite 3s; }
+
+@keyframes paquetes {
+  25% {
+    text-shadow: 1px 1px #F02400, 1.5px 1.5px #F02400, 2px 2px #F7760C; }
+  50% {
+    text-shadow: 1px 1px #F02400, 1.5px 1.5px #F02400, 2px 2px #F7760C, 2.5px 2.5px #F7760C, 3px 3px #F70C7E, 3.5px 3.5px #F70C7E; } }
+
 .precios-tabla {
   width: 250px;
   margin: auto;
@@ -630,6 +647,7 @@ h1.hdr-h1 {
     padding: 15px 20px 2px;
     color: #999; }
     .precios-tabla__info li {
+      list-style: none;
       padding-bottom: 1em;
       border-bottom: 1px solid rgba(0, 0, 0, 0.15);
       margin-bottom: 1em; }
@@ -753,9 +771,12 @@ h1.hdr-h1 {
     line-height: 1.4;
     color: white; }
     .info h4 span {
-      font-size: 13px;
+      font-size: 15px;
       font-weight: 300;
       color: white; }
+
+.fa-map-marker-alt {
+  padding-bottom: 30px; }
 
 form {
   color: black;

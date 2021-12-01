@@ -109,14 +109,16 @@ i {
     color: $blanco;
 
     span {
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 300;
     color: $blanco;
-}
+    }
   }
 }
 
-
+.fa-map-marker-alt{
+    padding-bottom: 30px;
+}
 form{
     color: black;
     text-align: left;
