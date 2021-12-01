@@ -625,7 +625,8 @@ body {
       position: absolute; }
   .precios-tabla__info {
     padding: 15px 20px 2px;
-    color: #999; }
+    color: #686664;
+    font-weight: 600; }
     .precios-tabla__info li {
       list-style: none;
       padding-bottom: 1em;
@@ -650,8 +651,7 @@ body {
     .precios-tabla__precio {
       font-size: 3em; }
     .precios-tabla__info {
-      padding: 20px;
-      color: #999; } }
+      padding: 20px; } }
 
 @media (min-width: 320px) and (max-width: 599px) {
   .carousel-item img {
@@ -669,8 +669,7 @@ body {
     .precios-tabla__precio {
       font-size: 2em; }
     .precios-tabla__info {
-      padding: 10px;
-      color: #999; } }
+      padding: 10px; } }
 
 .contact {
   background-image: linear-gradient(109.6deg, #08020f 11.2%, #0b3e49 91.1%);

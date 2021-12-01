@@ -1,4 +1,4 @@
-$negro: rgb(0, 0, 0);
+$negro: rgb(104, 102, 100);
 $blanco:  #f3ede8;
 $amarillo: #F7760C;
 $naranja: #D9490B;
@@ -112,7 +112,8 @@ $rosa: #F70C7E;
   // DESCRIPCIÓN TABLA
   &__info {
     padding: 15px 20px 2px;
-    color: #999;
+    color:$negro;
+    font-weight: 600;
   
     li {
       list-style: none;
@@ -152,7 +153,6 @@ $rosa: #F70C7E;
   }
     &__info {
     padding: 20px;
-    color: #999;
     }
   }
 }
@@ -183,7 +183,6 @@ $rosa: #F70C7E;
       
   &__info {
     padding: 10px;
-    color: #999;
   }
   }
 };
