@@ -1,0 +1,113 @@
+// IMAGEN DE FONDO PC
+#principal_image{
+    display: block;
+    width:100%;
+    height:100vh;
+    position: absolute;
+
+  }
+
+// LOGOTIPO DE INICIO
+.principal_page{
+  align-items: flex-start; //EN PC y TABLET
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+}
+// LETRAS DEL LOGO
+.ecole_position{
+  font-size: 82px;
+  color: rgb(247, 239, 169);
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  margin-left: 14%; //EN PC
+  }
+  #span-inicio{
+    font-size: 30px;
+    letter-spacing: 2px;
+  }
+
+  
+.logo_position{
+  display: block;
+  position: static;
+  width: 60%; //EN PC
+  height: auto;
+}
+.logo-animation {
+  cursor: pointer;
+  animation: pulse 2.5s infinite;
+}
+@keyframes pulse {
+  0% {
+    
+    opacity: 1;
+  }
+  25% {
+   
+    opacity: 1;
+  }
+  50% {
+   
+    opacity: 1;
+    transform: translateY(-15px);
+  }
+  75% {
+   
+    opacity: 1;
+  }
+  100% {
+    
+    opacity: 1;
+    transform: none;
+  }
+}
+
+// OCULTAR
+#tablet_image, #movil_image{
+  display: none;
+  position: absolute;
+}
+
+  // RESPONSIVE
+  // Tablet
+  @media(min-width: 600px) and (max-width: 1023px){
+      .movil_image{
+      display: none;
+    }
+    .ecole_position{
+      margin-left: 9%; //EN TABLET
+      font-size: 48px;
+      }
+}
+  
+  // Smartphone
+  @media(min-width:300px) and (max-width: 599px){
+
+    #tablet_image{
+      display: none;
+    }
+
+    #movil_image{
+        display: block;
+        height: 100vh;
+        width: 100%;
+    }
+
+    .principal_page{
+      align-items: center; //SMARTPHONE
+    }
+    .ecole_position{
+      margin-left: 0; //EN SMARTPHONE
+      font-size: 35px;
+      }
+      #span-inicio{
+        font-size: 22px;
+      }
+};
+  
+  

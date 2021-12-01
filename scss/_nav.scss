@@ -1,0 +1,351 @@
+// Paleta de Colores 
+$negro: rgb(5, 5, 5);
+$amarillo: #F7760C;
+$naranja: #D9490B;
+$rojo1: #F02400;
+$rojo2: #D90B0B;
+$blanco:#dbdbdb;
+
+@import url("https://fonts.googleapis.com/css?family=Lora:400,400i,700");
+@mixin sp-layout {
+  @media screen and (max-width: 750px) {
+    @content;
+  }
+}
+
+@mixin pc-layout {
+  @media screen and (min-width: 751px) {
+    @content;
+  }
+}
+
+body {
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: Lora, sans-serif;
+  background: $negro;
+}
+
+// FORMATO MENU HAMBURGUESA
+#burger-toggle {
+  position: absolute;
+  appearance: none;
+  opacity: 0;
+
+  &:checked {
+    & ~ .menu {
+      opacity: 1;
+      visibility: visible;
+
+      .menu-nav-link span div,
+      img,
+      .title p {
+        transform: translateY(0);
+        transition: 1.2s 0.1s cubic-bezier(0.35, 0, 0.07, 1);
+      }
+
+      .image-link {
+        @for $i from 1 through 4 {
+          &:nth-child(#{$i}) img {
+            transition-delay: 0.1s + 0.08s * $i;
+          }
+        }
+      }
+    }
+
+    & ~ .burger-menu {
+      .line {
+        &::after {
+          transform: translateX(0);
+        }
+
+        &:nth-child(1) {
+          transform: translateY(calc(var(--burger-menu-radius) / 5))
+            rotate(45deg);
+        }
+
+        &:nth-child(2) {
+          transform: scaleX(0);
+        }
+
+        &:nth-child(3) {
+          transform: translateY(calc(var(--burger-menu-radius) / -5))
+            rotate(-45deg);
+        }
+      }
+    }
+  }
+}
+
+.burger-menu {
+  --burger-menu-radius: 4em;
+  position: fixed;
+  top: 3vh;
+  left: 2vw;
+  z-index: 100;
+  display: block;
+  width: var(--burger-menu-radius);
+  height: var(--burger-menu-radius);
+  outline: none;
+  cursor: pointer;
+
+  .line {
+    position: absolute;
+    left: 25%;
+    width: 50%;
+    height: 3px;
+    background: $amarillo;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.5s;
+
+    &:nth-child(1) {
+      top: 30%;
+    }
+
+    &:nth-child(2) {
+      top: 50%;
+    }
+
+    &:nth-child(3) {
+      top: 70%;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--primary-color-darker);
+      transform: translateX(-100%);
+      transition: 0.25s;
+    }
+
+    @for $i from 2 through 3 {
+      &:nth-child(#{$i})::after {
+        transition-delay: 0.1s * ($i - 1);
+      }
+    }
+  }
+
+  &:hover {
+    .line::after {
+      transform: translateX(0);
+    }
+  }
+}
+
+// CONTENIDO DEL MENU
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  overflow-x: hidden;
+  visibility: hidden;
+  transition: 0.3s;
+  background-image: linear-gradient( 109.6deg,  rgb(9, 14, 20) 11.2%, rgb(12, 25, 41) 51.2%, rgba(0,0,0,1) 98.6% );
+  background-size: 400% 400%;
+  animation: gradient 12s ease infinite;
+  height: 100vh;
+
+  @include sp-layout {
+    display: block;
+  }
+
+  &-inner{
+    text-align: center;
+  #logonav{
+    width: 90px;
+    height: auto;
+    padding-bottom: 40px;
+    }
+  }
+  &-nav {
+    display: flex;
+    text-align: center;
+    list-style-type: none;
+
+    @include sp-layout {
+      flex-direction: column;
+    }
+
+    &-item {
+      flex: 1;
+    }
+
+    &-link {
+      position: relative;
+      display: inline-flex;
+      font-size: 2rem;
+      font-weight: 400;
+      color: white;
+      text-decoration: none;
+      span {
+        overflow: hidden;
+
+        div {
+          transform: translateY(102%);
+        }
+      }
+
+      &::after {
+        position: absolute;
+        content: "";
+        top: 100%;
+        width: 100%;
+        height: 3px;
+        background: var(--primary-color);
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.5s;
+      }
+
+      &:hover::after {
+        transform: scaleX(1);
+        transform-origin: left;
+      }
+    }
+  }
+
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  a:hover {
+    color: $naranja;
+  }
+  .gallery {
+    text-align: center;
+  }
+
+  .title {
+    color: $naranja;
+    overflow: hidden;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transform: translateY(102%);
+    }
+  }
+
+  // IMAGENES DEL MENÚ
+  .images {
+    margin-top: 36px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @include sp-layout {
+      justify-content: center;
+    }
+
+    .image-link {
+      width: 15vw;
+      margin: 0 12px;
+      overflow: hidden;
+
+      @include sp-layout {
+        width: 40vw;
+        margin: 0 12px 12px 0;
+      }
+
+      .image {
+        position: relative;
+        transition: 0.6s;
+
+        &::before {
+          position: absolute;
+          content: attr(data-label);
+          top: 0;
+          left: 0;
+          z-index: 1;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.6);
+          opacity: 0;
+          transition: 0.4s;
+        }
+      }
+
+      &:hover .image {
+        transform: scale(1.2);
+        font-size: 22px;
+        font-weight: 500;
+        color: white;
+
+
+        &::before {
+          opacity: 1;
+        }
+      }
+    }
+
+    img {
+      height: 250px;
+      transform: translateY(102%);
+    }
+  }
+
+
+// ___________
+// RESPONSIVE
+// ___________
+// Tablet
+@media(min-width: 600px) and (max-width: 1023px){
+  .menu-nav-link{
+    font-weight: 50;
+  }
+.menu-nav-item{
+  padding: 10px;
+}
+.menu-inner{
+  padding-top: 50px;
+}
+.images{
+  margin-bottom: 25px;
+}
+}
+  
+//   Smartphone
+@media(min-width:320px) and (max-width: 599px){
+  .menu-nav-link{
+ font-size: 2rem;
+  }
+  .menu-nav-item{
+    padding: 8px;
+  }
+.menu-inner{
+  padding-top: 50px;
+}
+.images{
+  margin-bottom: 25px;
+}
+.burger-menu .line{
+  background: $blanco;
+  height: 4.2px;
+  width: 52%;
+}
+};
+

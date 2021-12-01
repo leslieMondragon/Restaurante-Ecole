@@ -1,0 +1,69 @@
+$alto: 280px;
+$ancho: 370px; 
+$negro: #000000;
+$blanco: #f1f0ea;
+
+// CABECERA
+.padre-hdr{
+  display: flex;
+  justify-content: center;
+}
+div.hdr-galeria{
+  padding: 40px;
+  background-color: #153624;
+  background-image: linear-gradient(150deg, #08180f 0%, #030a00 74%);
+  box-shadow: 0 0 3px 3px #050505 inset;
+  color: $blanco;
+  width: 87.5%;
+}
+// TÍTULO "GALERÍA"
+h1.hdr-h1{
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+	font-weight: bold;
+  font: 700 35px 'Dancing Script', cursive;
+  margin: 0 !important;
+}
+// GALERÍA
+  .gallery {
+    z-index: -1;
+    max-width: 1200px;
+    margin: 15px auto;
+    padding-top: 10px;
+    text-align: center;
+  }
+  
+  .gallery-item {
+    position: relative;
+    display: inline-block;
+    height: $alto;
+    width: $ancho;
+    margin: 10px;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  
+  .restaurant-picture {
+    height: $alto;
+    width: $ancho;
+    transition: all 0.3s ease;
+    transition-delay: 0.2s;
+  }
+  
+  /** HOVER **/
+  .gallery-item:hover .restaurant-picture {
+    transform: scale(1.5) rotate(15deg);
+  }
+  
+  //   Smartphone
+@media(min-width:320px) and (max-width: 599px){
+  .gallery-item{
+    width: 85%;
+  }
+
+  div.hdr-galeria{
+ width: 85%;
+ padding: 20px;
+  }
+} 
