@@ -187,7 +187,6 @@ body {
   .menu-inner {
     text-align: center; }
     .menu-inner #logonav {
-      width: 90px;
       height: auto;
       padding-bottom: 40px; }
   .menu-nav {
@@ -281,7 +280,7 @@ body {
       transform: scale(1.2);
       font-size: 22px;
       font-weight: 500;
-      color: white; }
+      color: #F7760C; }
       .images .image-link:hover .image::before {
         opacity: 1; }
   .images img {
@@ -517,6 +516,9 @@ body {
 
 .heading .galeria {
   font-size: 4.5rem; }
+
+.galeria img {
+  margin-top: 25px; }
 
 .gallery {
   z-index: -1;
