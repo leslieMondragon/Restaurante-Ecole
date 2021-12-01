@@ -2,16 +2,7 @@
 $negro: rgb(0, 0, 0);
 $amarillo: #F7760C;
 $naranja: #D9490B;
-$rojo1: #F02400;
-$rojo2: #D90B0B;
-$rosa: #F70C7E;
 $blanco: rgb(255, 255, 255);
-$gradbox-colorBlue: #dffaf9;
-$gradbox-colorPink: #ffcbce;
-
-$gradbox-deg: 120deg;
-$gradbox-bgSize: 400%;
-$gradbox-animDur: 3.5s;
 
 // 
 .contact {
@@ -120,7 +111,7 @@ i {
     padding-bottom: 30px;
 }
 form{
-    color: black;
+    color: $negro;
     text-align: left;
 }
 
@@ -128,6 +119,7 @@ form{
 #tamañoMapa{
     width: 100%;
 }
+
 // ___________
 // RESPONSIVE
 // Tablet
