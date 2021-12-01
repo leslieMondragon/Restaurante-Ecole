@@ -3,27 +3,8 @@ $ancho: 370px;
 $negro: #000000;
 $blanco: #f1f0ea;
 
-// CABECERA
-.padre-hdr{
-  display: flex;
-  justify-content: center;
-}
-div.hdr-galeria{
-  padding: 40px;
-  background-color: #153624;
-  background-image: linear-gradient(150deg, #08180f 0%, #030a00 74%);
-  box-shadow: 0 0 3px 3px #050505 inset;
-  color: $blanco;
-  width: 87.5%;
-}
-// TÍTULO "GALERÍA"
-h1.hdr-h1{
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 1.2px;
-	font-weight: bold;
-  font: 700 35px 'Dancing Script', cursive;
-  margin: 0 !important;
+.heading .galeria {
+  font-size: 4.5rem;
 }
 // GALERÍA
   .gallery {
@@ -62,8 +43,4 @@ h1.hdr-h1{
     width: 85%;
   }
 
-  div.hdr-galeria{
- width: 85%;
- padding: 20px;
-  }
-} 
+}
